@@ -121,8 +121,8 @@ ips: ${IP_NAMES}
 	export IP_PRJ_NAME=${IP_NAME}_prj;						\
 	export IP_NAME=${IP_NAME}; 								\
 	${XILINX_VIVADO_BATCH}									\
-		-source ${TCL_BUILD_IPS_DIR}/pre_config.tcl 	\
-		-source ${IP_DIR}/config.tcl							\
+		-source ${TCL_BUILD_IPS_DIR}/pre_config.tcl 		\
+		-source ${IP_DIR}/config.tcl						\
 		-source ${TCL_BUILD_IPS_DIR}/post_config.tcl
 	touch $@
 

@@ -25,9 +25,9 @@
 //                                                                              //
 //////////////////////////////////////////////////////////////////////////////////
 
-`include "uninasoc_axi.svh"
+`include "fssd_axi.svh"
 
-module burst_controller #(
+module _burst_controller #(
     parameter ID_WIDTH          = 2,
     parameter ADDR_WIDTH        = 32,
     parameter DATA_WIDTH        = 512,
@@ -39,8 +39,7 @@ module burst_controller #(
     input   logic                   clk_i,
     input   logic                   rst_ni, // active low reset
     
-    // AXI-Slave Interface to the NVMe Target Controller
-    `DECLARE_BUS(s, DATA_WIDTH);
+
     /*input   logic [id_width-1:0]    s_awid,
     input   logic [addr_width-1:0]  s_awaddr,
     input   logic [2:0]             s_awsize,
@@ -84,15 +83,17 @@ module burst_controller #(
     input   logic                   s_rready,*/
 
     // Interface with FTL Controller (TODO: replace with Mem interface)
-    output  logic [addr_width-1:0]  mem_address,
+    output  logic [ADDR_WIDTH-1:0]  mem_address,
     output  logic                   addr_valid,
     output  logic                   mem_rw,     // 0 for read, 1 for write
-    input   logic [addr_width-1:0]  mem_new_address,
+    input   logic [ADDR_WIDTH-1:0]  mem_new_address,
     input   logic                   addr_resp,
     input   logic                   cache_hit,
 
+    // AXI-Slave Interface to the NVMe Target Controller
+    `DEFINE_AXI_SLAVE_PORTS(s, DATA_WIDTH),
     // AXI-Master interface to the flash subsystem
-    `DECLARE_BUS(m_cache, DATA_WIDTH)
+    `DEFINE_AXI_MASTER_PORTS(m_cache, DATA_WIDTH)
     /*output  logic [id_width-1:0]    m_cache_awid,
     output  logic [user_width-1:0]  m_cache_awuser,
     output  logic [addr_width-1:0]  m_cache_awaddr,
@@ -143,9 +144,9 @@ localparam int READ     = 0;
 localparam int WRITE    = 1;
 
 // Type Declaration
-enum logic [3:0] {
+typedef enum logic [3:0] {
     halt, rrequest, wrequest, rwait, wwait, rsend, wsend, rresp, wresp
-} fsm_state; 
+} fsm_state_e; 
 
 // Signals Declaration
 logic [ADDR_WIDTH-1:0]  new_addr_buf;
@@ -153,8 +154,8 @@ logic                   ld_addr;
 logic                   user_buf;
 logic                   mode;
 
-fsm_state               state;
-fsm_state               next_state;
+fsm_state_e             state;
+fsm_state_e             next_state;
 
 // Assignments
 assign mem_rw = mode;
@@ -207,7 +208,7 @@ assign m_cache_axi_arlock   = s_axi_arlock;
 // Registering Inputs   //
 //////////////////////////
 
-always_ff @(posedge clk) begin
+always_ff @(posedge clk_i) begin
     if (!rst_ni) begin
         new_addr_buf    <= '0;
         user_buf        <= '0;
@@ -226,7 +227,7 @@ end
 // the ftl_controller to translate logical to physical page addresses.
 // READ or WRITE operations are sent towards the flash_subsystem
 
-always_ff @(posedge clk) begin
+always_ff @(posedge clk_i) begin
     if (!rst_ni) begin
         state <= halt;
     end
@@ -296,8 +297,8 @@ always_comb begin
     m_cache_axi_araddr  = '0;
     m_cache_axi_awvalid = '0;
     m_cache_axi_awaddr  = '0;
-    m_cache_axi_aruser  = '0;
-    m_cache_axi_awuser  = '0;
+    //m_cache_axi_aruser  = '0;
+    //m_cache_axi_awuser  = '0;
     s_axi_arready       = '0;
     s_axi_awready       = '0;
     mode                = '0;
@@ -327,21 +328,21 @@ always_comb begin
         rsend: begin
             m_cache_axi_arvalid = 1;
             m_cache_axi_araddr = new_addr_buf;
-            m_cache_axi_aruser = {{(user_width-1){1'b0}}, user_buf};
+            //m_cache_axi_aruser = {{(USER_WIDTH-1){1'b0}}, user_buf};
         end
         
         wsend: begin
             m_cache_axi_awvalid = 1;
             m_cache_axi_awaddr = new_addr_buf;
-            m_cache_axi_awuser = {{(user_width-1){1'b0}}, user_buf};
+            //m_cache_axi_awuser = {{(USER_WIDTH-1){1'b0}}, user_buf};
         end
         
         rresp: begin
-            s_arready = 1;
+            s_axi_arready = 1;
         end
         
         wresp: begin
-            s_awready = 1;
+            s_axi_awready = 1;
         end
         
         default:;

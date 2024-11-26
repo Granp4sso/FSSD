@@ -1,0 +1,269 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Nov 26 11:49:28 2024
+# Process ID: 19694
+# Current directory: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1
+# Command line: vivado -log burst_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source burst_controller.tcl
+# Log file: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/burst_controller.vds
+# Journal file: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/vivado.jou
+# Running On: stefano-Victus-by-HP-Laptop-16-e0xxx, OS: Linux, CPU Frequency: 3651.639 MHz, CPU Physical cores: 16, Host memory: 32954 MB
+#-----------------------------------------------------------
+source burst_controller.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.srcs/sources_1/imports'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: burst_controller
+Command: synth_design -top burst_controller -part xcu250-figd2104-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu250'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19700
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2153.027 ; gain = 349.801 ; free physical = 16382 ; free virtual = 25026
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1575.714; parent = 1371.151; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3127.934; parent = 2153.031; children = 974.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'burst_controller' [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/synth/burst_controller.sv:53]
+INFO: [Synth 8-6157] synthesizing module '_burst_controller' [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:30]
+INFO: [Synth 8-6155] done synthesizing module '_burst_controller' (0#1) [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'burst_controller' (0#1) [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/synth/burst_controller.sv:53]
+WARNING: [Synth 8-7129] Port s_axi_awuser[3] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[2] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[1] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[3] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[2] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[1] in module _burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module _burst_controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2220.996 ; gain = 417.770 ; free physical = 16334 ; free virtual = 24979
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1575.714; parent = 1371.151; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3195.902; parent = 2221.000; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2235.840 ; gain = 432.613 ; free physical = 16334 ; free virtual = 24979
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1575.714; parent = 1371.151; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3210.746; parent = 2235.844; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu250-figd2104-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xcu250-figd2104-2L-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2252.750 ; gain = 449.523 ; free physical = 16334 ; free virtual = 24978
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1575.714; parent = 1371.151; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3227.656; parent = 2252.754; children = 974.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module '_burst_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    halt |                        000000001 |                             0000
+                rrequest |                        000000010 |                             0001
+                   rwait |                        000000100 |                             0011
+                   rsend |                        000001000 |                             0101
+                   rresp |                        000010000 |                             0111
+                wrequest |                        000100000 |                             0010
+                   wwait |                        001000000 |                             0100
+                   wsend |                        010000000 |                             0110
+                   wresp |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module '_burst_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2260.758 ; gain = 457.531 ; free physical = 16306 ; free virtual = 24951
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1575.714; parent = 1371.151; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.664; parent = 2260.762; children = 974.902
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   7 Input   32 Bit        Muxes := 3     
+	   8 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 12288 (col length:96)
+BRAMs: 5376 (col length: RAMB18 384 RAMB36 192)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design burst_controller has port m_axi_awuser[3] driven by constant 0
+INFO: [Synth 8-3917] design burst_controller has port m_axi_awuser[2] driven by constant 0
+INFO: [Synth 8-3917] design burst_controller has port m_axi_awuser[1] driven by constant 0
+INFO: [Synth 8-3917] design burst_controller has port m_axi_aruser[3] driven by constant 0
+INFO: [Synth 8-3917] design burst_controller has port m_axi_aruser[2] driven by constant 0
+INFO: [Synth 8-3917] design burst_controller has port m_axi_aruser[1] driven by constant 0
+WARNING: [Synth 8-7129] Port s_axi_awuser[3] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[2] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[1] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[3] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[2] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[1] in module burst_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module burst_controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15284 ; free virtual = 23936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2633.389; parent = 2428.857; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15284 ; free virtual = 23936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2635.967; parent = 2431.436; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15287 ; free virtual = 23938
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2636.482; parent = 2431.951; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15330 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2636.873; parent = 2432.342; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15330 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2636.889; parent = 2432.357; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2637.002; parent = 2432.471; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2637.064; parent = 2432.533; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2637.064; parent = 2432.533; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2637.096; parent = 2432.564; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |    70|
+|3     |LUT3 |     1|
+|4     |LUT4 |    33|
+|5     |LUT6 |     2|
+|6     |FDRE |    41|
+|7     |FDSE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |   149|
+|2     |  inst   |_burst_controller |   149|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2637.127; parent = 2432.596; children = 204.562
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4193.602; parent = 3218.699; children = 974.902
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.695 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3218.703 ; gain = 1415.469 ; free physical = 15331 ; free virtual = 23985
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3236.602 ; gain = 0.000 ; free physical = 15403 ; free virtual = 24057
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3392.312 ; gain = 0.000 ; free physical = 15387 ; free virtual = 24037
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9149a463
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3392.312 ; gain = 1589.086 ; free physical = 15442 ; free virtual = 24092
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/burst_controller.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP burst_controller, cache-ID = dd8fafe151fd3d09
+INFO: [Common 17-1381] The checkpoint '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/burst_controller.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file burst_controller_utilization_synth.rpt -pb burst_controller_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 26 11:49:54 2024...

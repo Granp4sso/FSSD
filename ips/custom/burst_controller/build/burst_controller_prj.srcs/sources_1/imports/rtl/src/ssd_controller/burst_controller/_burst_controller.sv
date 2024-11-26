@@ -102,7 +102,7 @@ assign m_axi_awid     = s_axi_awid;
 assign m_axi_awsize   = s_axi_awsize;
 assign m_axi_awlen    = s_axi_awlen;
 assign m_axi_awburst  = s_axi_awburst;
-assign m_axi_awcache  = '1; //s_axi_awcache;//'1;
+assign m_axi_awcache  = s_axi_awcache;//'1;
 assign m_axi_awprot   = s_axi_awprot;
 assign m_axi_awlock   = s_axi_awlock;
 assign m_axi_awqos    = s_axi_awqos;
@@ -118,10 +118,6 @@ assign m_axi_arqos    = s_axi_arqos;
 assign m_axi_arprot   = s_axi_arprot;
 assign m_axi_arlock   = s_axi_arlock;
 assign m_axi_arregion = s_axi_arregion;
-
-// The output master user signal
-// Is not the one received on the slave bus.
-// Instead, it is generated from the FTL controller.
 
 //////////////////////////
 // Registering Inputs   //

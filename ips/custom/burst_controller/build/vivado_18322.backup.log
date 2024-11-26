@@ -1,0 +1,153 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Nov 26 11:44:26 2024
+# Process ID: 18322
+# Current directory: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build
+# Command line: vivado -mode batch -source /home/stefano/Desktop/Work/Projects/FSSD/tcl/build/ips/pre_config.tcl -source /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/config.tcl -source /home/stefano/Desktop/Work/Projects/FSSD/tcl/build/ips/post_config.tcl
+# Log file: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/vivado.log
+# Journal file: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/vivado.jou
+# Running On: stefano-Victus-by-HP-Laptop-16-e0xxx, OS: Linux, CPU Frequency: 3885.544 MHz, CPU Physical cores: 16, Host memory: 32954 MB
+#-----------------------------------------------------------
+source /home/stefano/Desktop/Work/Projects/FSSD/tcl/build/ips/pre_config.tcl
+# create_project $::env(IP_PRJ_NAME) . -force -part  $::env(XILINX_PART_NUMBER)
+# set_property board_part $::env(XILINX_BOARD_PART) [current_project]
+source /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/config.tcl
+# set top_module _$::env(IP_NAME)
+# set rtl_top_dir $::env(RTL_SRC)/ssd_controller/burst_controller
+# set rtl_svh_dir $::env(RTL_HEADERS)
+# set rtl_pkg_dir $::env(RTL_PKG)
+# set axi_macro_header ${rtl_svh_dir}/fssd_axi.svh
+# set top_module_src ${rtl_top_dir}/${top_module}.sv
+# set src_file_list {}
+# lappend src_file_list ${axi_macro_header}
+# lappend src_file_list ${top_module_src}
+# source $::env(TCL_BUILD_IPS_DIR)/package_ip.tcl
+## set_param project.defaultIPCacheSetting none
+## import_files -norecurse -fileset [current_fileset] $src_file_list
+## update_compile_order -fileset sources_1
+## set_property top ${top_module} [current_fileset]
+## set_msg_config -id {[IP_Flow 19-3833]} -suppress
+## ipx::package_project -root_dir $::env(IP_DIR)/build/$::env(IP_PRJ_NAME).srcs/sources_1/imports -vendor user.org -library user -taxonomy /UserIP
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_DATA_WIDTH' by 32 for port or parameter 'axi_data_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_ADDR_WIDTH' by 32 for port or parameter 'axi_addr_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_STRB_WIDTH' by 4 for port or parameter 'axi_strb_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_ID_WIDTH' by 2 for port or parameter 'axi_id_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_LEN_WIDTH' by 8 for port or parameter 'axi_len_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_SIZE_WIDTH' by 3 for port or parameter 'axi_size_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_BURST_WIDTH' by 2 for port or parameter 'axi_burst_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_LOCK_WIDTH' by 1 for port or parameter 'axi_lock_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_CACHE_WIDTH' by 4 for port or parameter 'axi_cache_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_PROT_WIDTH' by 3 for port or parameter 'axi_prot_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_QOS_WIDTH' by 4 for port or parameter 'axi_qos_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_VALID_WIDTH' by 1 for port or parameter 'axi_valid_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_READY_WIDTH' by 1 for port or parameter 'axi_ready_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_LAST_WIDTH' by 1 for port or parameter 'axi_last_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_RESP_WIDTH' by 2 for port or parameter 'axi_resp_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_REGION_WIDTH' by 4 for port or parameter 'axi_region_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_USER_WIDTH' by 4 for port or parameter 'axi_user_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_DATA_WIDTH' by 32 for port or parameter 'axi_data_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_ADDR_WIDTH' by 32 for port or parameter 'axi_addr_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_STRB_WIDTH' by 4 for port or parameter 'axi_strb_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_ID_WIDTH' by 2 for port or parameter 'axi_id_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_LEN_WIDTH' by 8 for port or parameter 'axi_len_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_SIZE_WIDTH' by 3 for port or parameter 'axi_size_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_BURST_WIDTH' by 2 for port or parameter 'axi_burst_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_LOCK_WIDTH' by 1 for port or parameter 'axi_lock_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_CACHE_WIDTH' by 4 for port or parameter 'axi_cache_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_PROT_WIDTH' by 3 for port or parameter 'axi_prot_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_QOS_WIDTH' by 4 for port or parameter 'axi_qos_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_VALID_WIDTH' by 1 for port or parameter 'axi_valid_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_READY_WIDTH' by 1 for port or parameter 'axi_ready_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_LAST_WIDTH' by 1 for port or parameter 'axi_last_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_RESP_WIDTH' by 2 for port or parameter 'axi_resp_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_REGION_WIDTH' by 4 for port or parameter 'axi_region_t'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'AXI_USER_WIDTH' by 4 for port or parameter 'axi_user_t'
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "rtl/svh/fssd_axi.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:decode(id('MODELPARAM_VALUE.DATA_WIDTH')) / 8)" into user parameter "STRB_WIDTH".
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+## set_property name $::env(IP_PRJ_NAME) [ipx::current_core]
+## set_property core_revision 2 [ipx::current_core]
+## ipx::update_checksums [ipx::current_core]
+## ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-861] XGUI layout file basename "xgui/_burst_controller_v1_0.tcl" does not have the current IP <name>_v<version> format. If the IP name or version was changed recently, recreate this file to update the file format.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+## ipx::save_core [ipx::current_core]
+## set_property  ip_repo_paths  $::env(IP_DIR)/build/$::env(IP_PRJ_NAME).srcs/sources_1/imports [current_project]
+## update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.srcs/sources_1/imports'.
+## create_ip -vlnv user.org:user:$::env(IP_PRJ_NAME):1.0 -module_name $::env(IP_NAME)
+source /home/stefano/Desktop/Work/Projects/FSSD/tcl/build/ips/post_config.tcl
+# generate_target {instantiation_template} [get_files $::env(IP_NAME).xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'burst_controller'...
+# generate_target all [get_files $::env(IP_NAME).xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'burst_controller'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'burst_controller'...
+# create_ip_run [get_files -of_objects [get_fileset sources_1] $::env(IP_NAME).xci]
+# launch_run -jobs 8 $::env(IP_NAME)_synth_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: burst_controller
+[Tue Nov 26 11:44:36 2024] Launched burst_controller_synth_1...
+Run output will be captured here: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/runme.log
+# wait_on_run $::env(IP_NAME)_synth_1
+[Tue Nov 26 11:44:36 2024] Waiting for burst_controller_synth_1 to finish...
+
+*** Running vivado
+    with args -log burst_controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source burst_controller.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source burst_controller.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.srcs/sources_1/imports'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: burst_controller
+Command: synth_design -top burst_controller -part xcu250-figd2104-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu250'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18417
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+ERROR: [Synth 8-36] 'm_cache_axi_arready' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:199]
+ERROR: [Synth 8-36] 'm_cache_axi_awready' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:205]
+ERROR: [Synth 8-36] 'm_cache_axi_arvalid' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:218]
+ERROR: [Synth 8-36] 'm_cache_axi_araddr' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:219]
+ERROR: [Synth 8-36] 'm_cache_axi_awvalid' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:220]
+ERROR: [Synth 8-36] 'm_cache_axi_awaddr' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:221]
+ERROR: [Synth 8-36] 'm_cache_axi_arvalid' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:251]
+ERROR: [Synth 8-36] 'm_cache_axi_araddr' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:252]
+ERROR: [Synth 8-36] 'm_cache_axi_awvalid' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:257]
+ERROR: [Synth 8-36] 'm_cache_axi_awaddr' is not declared [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:258]
+INFO: [Synth 8-10285] module '_burst_controller' is ignored due to previous errors [/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv:274]
+INFO: [Synth 8-9084] Verilog file '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv' ignored due to errors
+Failed to read verilog '/home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.gen/sources_1/ip/burst_controller/rtl/src/ssd_controller/burst_controller/_burst_controller.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 0 Warnings, 0 Critical Warnings and 11 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 26 11:44:47 2024...
+[Tue Nov 26 11:44:58 2024] burst_controller_synth_1 finished
+WARNING: [Vivado 12-13638] Failed runs(s) : 'burst_controller_synth_1'
+wait_on_runs: Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1861.227 ; gain = 0.000 ; free physical = 17910 ; free virtual = 26544
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 26 11:44:58 2024...

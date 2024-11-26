@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Nov 26 11:49:28 2024
+# Process ID: 19694
+# Current directory: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1
+# Command line: vivado -log burst_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source burst_controller.tcl
+# Log file: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/burst_controller.vds
+# Journal file: /home/stefano/Desktop/Work/Projects/FSSD/ips/custom/burst_controller/build/burst_controller_prj.runs/burst_controller_synth_1/vivado.jou
+# Running On: stefano-Victus-by-HP-Laptop-16-e0xxx, OS: Linux, CPU Frequency: 3651.639 MHz, CPU Physical cores: 16, Host memory: 32954 MB
+#-----------------------------------------------------------
+source burst_controller.tcl -notrace
